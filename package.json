@@ -1,12 +1,13 @@
 {
   "name": "@alinea/iso",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/alineacms/iso.git"
   },
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "node": "./dist/index.node.js",
