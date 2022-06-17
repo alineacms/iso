@@ -42,6 +42,7 @@
     "typescript": "^4.7.3"
   },
   "scripts": {
-    "build": "tsc && node build.js"
+    "build": "tsc && node build.js",
+    "prepare": "tsc && node build.js"
   }
 }
