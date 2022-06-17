@@ -2,42 +2,6 @@
 # yarn lockfile v1
 
 
-"@chialab/cjs-to-esm@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@chialab/cjs-to-esm/-/cjs-to-esm-0.16.0.tgz#83a1213592b4976750eeb0e23fca5cce11152e7b"
-  integrity sha512-VFLWsy2cFoRHsm80rOllttxfv3zA3TZ71WZL/+TwhRZwIybJKtAIG7wQgtD/YT8SHFnlluLP+YxfyV2NpteqyA==
-  dependencies:
-    "@chialab/estransform" "^0.16.0"
-
-"@chialab/esbuild-plugin-commonjs@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@chialab/esbuild-plugin-commonjs/-/esbuild-plugin-commonjs-0.16.0.tgz#349e55c5597747d7aa2b7dc47d8d6924a36d7037"
-  integrity sha512-IiF0LZ0EWk9lHitmP19H5MTv4krjda6gLvvIJ05yE5ku6nvvrEUrwzGgNt4M5jYGsospxWYyVt/hTxLydJKeyA==
-  dependencies:
-    "@chialab/cjs-to-esm" "^0.16.0"
-    "@chialab/esbuild-rna" "^0.16.0"
-    "@chialab/node-resolve" "^0.16.0"
-
-"@chialab/esbuild-rna@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@chialab/esbuild-rna/-/esbuild-rna-0.16.0.tgz#fac7395ef52fb98549f7729aa551ac885a929f89"
-  integrity sha512-iMnExy1bNdysQwum7BngueE0ThvrE1lTiXeZC4JU2MJEkoAd977T0P5l8XnRlOelhBIbmir7vInNod7tjLkzmA==
-  dependencies:
-    "@chialab/estransform" "^0.16.0"
-    "@chialab/node-resolve" "^0.16.0"
-
-"@chialab/estransform@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@chialab/estransform/-/estransform-0.16.0.tgz#4ea2e42d0a9b51618fe2531432d5d3054fdc5909"
-  integrity sha512-Zq7p2W8GY+onVl2Kgyj4lu+/T1bvV73p4FFJH6nI8MScQdDORCgkqWw0lnq6xBLbiTRqGDRdochrX5qNnvKoDA==
-  dependencies:
-    "@parcel/source-map" "^2.0.0"
-
-"@chialab/node-resolve@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@chialab/node-resolve/-/node-resolve-0.16.0.tgz#9d14682c521464112b99ad295fff5c0029336e6f"
-  integrity sha512-d+BM1rWWjTwPKtRe7UCe1vvBrr3fniZzORW+u2E47Syyy+WzBmtDCeMHGv+IAEqrARgpZQ2D3rAU/2n75JmYGA==
-
 "@esbx/extension@0.0.20":
   version "0.0.20"
   resolved "https://registry.yarnpkg.com/@esbx/extension/-/extension-0.0.20.tgz#fe1cfd526664fada83626351a50c5b4d074ecc8e"
@@ -84,13 +48,6 @@
     glob "^7.2.0"
     tsconfig-resolver "^3.0.1"
     which "^2.0.2"
-
-"@parcel/source-map@^2.0.0":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@parcel/source-map/-/source-map-2.0.5.tgz#7dabcea0890914c390b8cf32e208d3f667e1ff38"
-  integrity sha512-DRVlCFKLpqBSIbMxUoVlHgfiv12HTW/U7nnhzw52YgzDVXUX9OA41dXS1PU0pJ1si+D1k8msATUC+AoldN43mg==
-  dependencies:
-    detect-libc "^1.0.3"
 
 "@peculiar/asn1-schema@^2.1.6":
   version "2.1.9"
@@ -160,11 +117,6 @@ data-uri-to-buffer@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-4.0.0.tgz#b5db46aea50f6176428ac05b73be39a57701a64b"
   integrity sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==
-
-detect-libc@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
-  integrity sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==
 
 esbuild-android-64@0.14.43:
   version "0.14.43"

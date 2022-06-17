@@ -1,3 +1,4 @@
+export {default as Blob} from 'fetch-blob'
 export {default as File} from 'fetch-blob/file.js'
 export {FormData} from 'formdata-polyfill/esm.min.js'
 export {default as Headers} from 'node-fetch/src/headers.js'
