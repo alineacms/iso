@@ -6,8 +6,7 @@ const common = {
   outdir: './dist',
   format: 'esm',
   platform: 'node',
-  mainFields: ['module', 'main'],
-  conditions: ['import']
+  mainFields: ['module', 'main']
 }
 
 await esbuild.build({
@@ -17,7 +16,6 @@ await esbuild.build({
     './src/fetch.node.js',
     './src/streams.node.js'
   ],
-  splitting: true,
   bundle: true,
   plugins: [
     AliasPlugin.configure({
@@ -25,6 +23,9 @@ await esbuild.build({
       tslib: path.resolve('./node_modules/tslib/tslib.es6.js'),
       'web-streams-polyfill/ponyfill': path.resolve(
         './web-streams-polyfill/dist/ponyfill.es2018.mjs'
+      ),
+      '@remix-run/web-blob': path.resolve(
+        './node_modules/@remix-run/web-blob/src/blob.js'
       )
     })
   ],
@@ -38,6 +39,7 @@ await esbuild.build({
     './src/crypto.ts',
     './src/fetch.ts',
     './src/index.ts',
+    './src/streams.ts',
     './src/index.node.js'
   ]
 })

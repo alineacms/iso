@@ -13,18 +13,32 @@ export const {
   WritableStreamDefaultController,
   WritableStreamDefaultWriter
 } = globalThis
-/*
-declare class CompressionStream {
-  constructor(format: string)
 
-  readonly readable: ReadableStream<Uint8Array>
-  readonly writable: WritableStream<Uint8Array>
-}
+export type ByteLengthQueuingStrategy = globalThis.ByteLengthQueuingStrategy
+export type CountQueuingStrategy = globalThis.CountQueuingStrategy
+export type ReadableByteStreamController =
+  globalThis.ReadableByteStreamController
+export type ReadableStream<R = any> = globalThis.ReadableStream<R>
+export type ReadableStreamBYOBReader = globalThis.ReadableStreamBYOBReader
+export type ReadableStreamBYOBRequest = globalThis.ReadableStreamBYOBRequest
+export type ReadableStreamDefaultController<R = any> =
+  globalThis.ReadableStreamDefaultController<R>
+export type ReadableStreamDefaultReader<R = any> =
+  globalThis.ReadableStreamDefaultReader<R>
+export type TransformStream<I = any, O = any> = globalThis.TransformStream<I, O>
+export type TransformStreamDefaultController<O = any> =
+  globalThis.TransformStreamDefaultController<O>
+export type WritableStream<W = any> = globalThis.WritableStream<W>
+export type WritableStreamDefaultController =
+  globalThis.WritableStreamDefaultController
+export type WritableStreamDefaultWriter<W = any> =
+  globalThis.WritableStreamDefaultWriter<W>
 
-declare class DecompressionStream {
-  constructor(format: string)
-
-  readonly readable: ReadableStream<Uint8Array>
-  readonly writable: WritableStream<Uint8Array>
-}
-*/
+import type {
+  CompressionStream as CS,
+  DecompressionStream as DS
+} from './impl/compression'
+export type CompressionStream = CS
+export const CompressionStream: typeof CS = globalThis.CompressionStream
+export type DecompressionStream = CS
+export const DecompressionStream: typeof DS = globalThis.DecompressionStream

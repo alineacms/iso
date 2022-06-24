@@ -1,7 +1,7 @@
-export {Blob} from '../node_modules/@remix-run/web-blob/src/blob.js'
 export {default as Headers} from '../node_modules/@remix-run/web-fetch/src/fetch.js'
 export {default as fetch} from '../node_modules/@remix-run/web-fetch/src/headers.js'
 export {default as Request} from '../node_modules/@remix-run/web-fetch/src/request.js'
 export {default as Response} from '../node_modules/@remix-run/web-fetch/src/response.js'
 export {File} from '../node_modules/@remix-run/web-file/src/file.js'
 export {FormData} from '../node_modules/@remix-run/web-form-data/src/form-data.js'
+export {Blob} from '../node_modules/@remix-run/web-blob/src/blob.js'
