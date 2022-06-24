@@ -10,8 +10,7 @@ const common = {
   mainFields: ['module', 'main']
 }
 
-const prev = fs.readdirSync('dist')
-for (const file of prev) fs.unlinkSync(`dist/${file}`)
+fs.rmdirSync('dist', {recursive: true})
 
 await esbuild.build({
   ...common,
