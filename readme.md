@@ -7,4 +7,5 @@ are needed.
 Supported:
 
 - Crypto: via [@peculiar/webcrypto](https://github.com/PeculiarVentures/webcrypto)
-- Fetch: via [node-fetch](https://github.com/node-fetch/node-fetch)
+- Fetch: via [undici](https://github.com/nodejs/undici)
+- Blob: via [formdata-node](https://www.npmjs.com/package/formdata-node)

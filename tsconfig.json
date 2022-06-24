@@ -3,7 +3,8 @@
     "target": "esnext",
     "outDir": "./dist",
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true
   },
   "include": ["src"]
 }

@@ -1,6 +1,7 @@
 import {AliasPlugin} from '@esbx/alias'
 import esbuild from 'esbuild'
 import path from 'path'
+import fs from 'fs'
 
 const common = {
   outdir: './dist',
@@ -9,27 +10,34 @@ const common = {
   mainFields: ['module', 'main']
 }
 
+const prev = fs.readdirSync('dist')
+for (const file of prev) fs.unlinkSync(`dist/${file}`)
+
 await esbuild.build({
   ...common,
   entryPoints: [
     './src/crypto.node.js',
+    './src/buffer.node.js',
     './src/fetch.node.js',
     './src/streams.node.js'
   ],
   bundle: true,
+  splitting: true,
+  minify: true,
+  treeShaking: true,
   plugins: [
     AliasPlugin.configure({
-      '@remix-run/web-stream': path.resolve('./src/streams.node.js'),
+      'stream/web': path.resolve('./src/streams.node.js'),
       tslib: path.resolve('./node_modules/tslib/tslib.es6.js'),
-      'web-streams-polyfill/ponyfill': path.resolve(
-        './web-streams-polyfill/dist/ponyfill.es2018.mjs'
+      'web-streams-polyfill': path.resolve(
+        './node_modules/web-streams-polyfill/dist/ponyfill.es2018.mjs'
       ),
-      '@remix-run/web-blob': path.resolve(
-        './node_modules/@remix-run/web-blob/src/blob.js'
-      )
+      buffer: path.resolve('./src/buffer.node.js')
     })
   ],
-  inject: ['./inject.node.js']
+  banner: {
+    js: 'import {createRequire} from "module";const require = createRequire(import.meta.url);'
+  }
 })
 
 await esbuild.build({

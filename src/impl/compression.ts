@@ -1,24 +1,28 @@
 import type {Transform} from 'node:stream'
 import type {Zlib} from 'node:zlib'
 import {createDeflate, createGunzip, createGzip, createInflate} from 'node:zlib'
-import {TransformStream} from '../streams.node.js'
+// @ts-ignore
+import {TransformStream} from 'web-streams-polyfill'
 
 function transform(transformer: Transform & Zlib) {
   return new TransformStream({
-    async transform(
-      chunk: BufferSource,
+    transform(
+      buffer: BufferSource,
       controller: TransformStreamDefaultController<Uint8Array>
     ) {
-      if (!(chunk instanceof ArrayBuffer || ArrayBuffer.isView(chunk))) {
-        throw new TypeError('Input data must be a BufferSource')
-      }
-      transformer.write(chunk)
-      for await (let chunk of transformer) {
-        controller.enqueue(chunk)
-      }
+      transformer.write(buffer, err => {
+        if (err) controller.error(err)
+        else {
+          let chunk
+          while (null !== (chunk = transformer.read()))
+            controller.enqueue(chunk)
+        }
+      })
     },
     flush() {
-      return new Promise<void>(resolve => transformer.flush(() => resolve()))
+      return new Promise<void>(resolve => {
+        transformer.flush(() => resolve())
+      })
     }
   })
 }
