@@ -10,7 +10,7 @@ const common = {
   mainFields: ['module', 'main']
 }
 
-fs.rmdirSync('dist', {recursive: true})
+if (fs.existsSync('dist')) fs.rmSync('dist', {recursive: true})
 
 await esbuild.build({
   ...common,

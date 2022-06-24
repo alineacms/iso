@@ -43,7 +43,7 @@
     "web-streams-polyfill": "^3.2.1"
   },
   "scripts": {
-    "build": "tsc && node build.js",
-    "prepublishOnly": "tsc && node build.js"
+    "build": "node build.js && tsc",
+    "prepublishOnly": "node build.js && tsc"
   }
 }
