@@ -43,6 +43,7 @@ await esbuild.build({
   bundle: false,
   entryPoints: [
     './src/crypto.ts',
+    './src/blob.ts',
     './src/fetch.ts',
     './src/index.ts',
     './src/streams.ts',
