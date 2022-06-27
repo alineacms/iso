@@ -1,6 +1,6 @@
 // Source: https://github.com/node-fetch/node-fetch/blob/1c5ed6b981e6c5dd28bd50f5ab5418e5bd262b99/src/utils/multipart-parser.js
 
-import {File} from 'undici/lib/fetch/file.js'
+import {File as UndiciFile} from 'undici/lib/fetch/file.js'
 import {FormData} from 'undici/lib/fetch/formdata.js'
 
 let s = 0
@@ -374,7 +374,7 @@ export async function toFormData(Body, ct) {
   }
 
   const appendFileToFormData = () => {
-    const file = new File(entryChunks, filename, {type: contentType})
+    const file = new UndiciFile(entryChunks, filename, {type: contentType})
     formData.append(entryName, file)
   }
 
