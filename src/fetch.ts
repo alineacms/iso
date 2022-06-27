@@ -7,5 +7,3 @@ export type Headers = globalThis.Headers
 export const Headers = globalThis.Headers
 export type FormData = globalThis.FormData
 export const FormData = globalThis.FormData
-export type Blob = globalThis.Blob
-export const Blob = globalThis.Blob

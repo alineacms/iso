@@ -37,7 +37,7 @@ export type WritableStreamDefaultWriter<W = any> =
 import type {
   CompressionStream as CS,
   DecompressionStream as DS
-} from './impl/compression'
+} from './impl/compression.node'
 export type CompressionStream = CS
 export const CompressionStream: typeof CS = globalThis.CompressionStream
 export type DecompressionStream = CS

@@ -12,7 +12,7 @@ export {
   WritableStreamDefaultController,
   WritableStreamDefaultWriter
 } from 'web-streams-polyfill'
-export * from './impl/compression.js'
+export * from './impl/compression.node.js'
 import {ReadableStream as ReadableStreamPolyfill} from 'web-streams-polyfill'
 
 export class ReadableStream extends ReadableStreamPolyfill {

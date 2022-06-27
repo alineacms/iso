@@ -16,9 +16,9 @@ await esbuild.build({
   ...common,
   entryPoints: [
     './src/crypto.node.js',
-    './src/buffer.node.js',
     './src/fetch.node.js',
-    './src/streams.node.js'
+    './src/streams.node.js',
+    './src/blob.node.js'
   ],
   bundle: true,
   splitting: true,
@@ -30,7 +30,7 @@ await esbuild.build({
       'web-streams-polyfill': path.resolve(
         './node_modules/web-streams-polyfill/dist/ponyfill.es2018.mjs'
       ),
-      buffer: path.resolve('./src/buffer.node.js')
+      buffer: path.resolve('./src/blob.node.js')
     })
   ],
   banner: {
