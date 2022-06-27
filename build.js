@@ -22,7 +22,6 @@ await esbuild.build({
   ],
   bundle: true,
   splitting: true,
-  minify: true,
   treeShaking: true,
   plugins: [
     AliasPlugin.configure({
