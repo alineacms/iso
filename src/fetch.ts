@@ -5,5 +5,7 @@ export type Response = globalThis.Response
 export const Response = globalThis.Response
 export type Headers = globalThis.Headers
 export const Headers = globalThis.Headers
+export type File = globalThis.File
+export const File = globalThis.File
 export type FormData = globalThis.FormData
 export const FormData = globalThis.FormData
