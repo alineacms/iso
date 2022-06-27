@@ -20,7 +20,9 @@ await esbuild.build({
     './src/streams.node.js',
     './src/blob.node.js'
   ],
+  target: 'node14.13',
   bundle: true,
+  keepNames: true,
   splitting: true,
   treeShaking: true,
   plugins: [
