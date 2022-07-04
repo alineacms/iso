@@ -11,7 +11,9 @@ export const {
   TransformStreamDefaultController,
   WritableStream,
   WritableStreamDefaultController,
-  WritableStreamDefaultWriter
+  WritableStreamDefaultWriter,
+  TextEncoderStream,
+  TextDecoderStream
 } = globalThis
 
 export type ByteLengthQueuingStrategy = globalThis.ByteLengthQueuingStrategy
@@ -33,6 +35,8 @@ export type WritableStreamDefaultController =
   globalThis.WritableStreamDefaultController
 export type WritableStreamDefaultWriter<W = any> =
   globalThis.WritableStreamDefaultWriter<W>
+export type TextEncoderStream = globalThis.TextEncoderStream
+export type TextDecoderStream = globalThis.TextDecoderStream
 
 import type {
   CompressionStream as CS,

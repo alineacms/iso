@@ -25,6 +25,7 @@ await esbuild.build({
   keepNames: true,
   splitting: true,
   treeShaking: true,
+  inject: ['./inject.node.js'],
   plugins: [
     AliasPlugin.configure({
       'stream/web': path.resolve('./src/streams.node.js'),

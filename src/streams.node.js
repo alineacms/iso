@@ -14,6 +14,10 @@ export {
 } from 'web-streams-polyfill'
 export * from './impl/compression.node.js'
 import {ReadableStream as ReadableStreamPolyfill} from 'web-streams-polyfill'
+export {
+  TextEncoderStream,
+  TextDecoderStream
+} from '@stardazed/streams-text-encoding'
 
 export class ReadableStream extends ReadableStreamPolyfill {
   constructor(rawUnderlyingSource, rawStrategy) {
