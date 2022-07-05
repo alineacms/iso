@@ -6,18 +6,13 @@ import {TransformStream} from 'web-streams-polyfill'
 
 function transform(transformer: Transform & Zlib) {
   return new TransformStream({
-    transform(
-      buffer: BufferSource,
-      controller: TransformStreamDefaultController<Uint8Array>
-    ) {
-      transformer.write(buffer, err => {
-        if (err) controller.error(err)
-        else {
-          let chunk
-          while (null !== (chunk = transformer.read()))
-            controller.enqueue(chunk)
-        }
+    start(controller: TransformStreamDefaultController<Uint8Array>) {
+      transformer.on('data', data => {
+        controller.enqueue(data)
       })
+    },
+    transform(buffer: BufferSource) {
+      transformer.write(buffer)
     },
     flush() {
       return new Promise<void>(resolve => {
