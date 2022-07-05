@@ -35,6 +35,7 @@
     "@esbx/alias": "^0.0.20",
     "@peculiar/webcrypto": "^1.4.0",
     "@types/node": "^18.0.0",
+    "cjstoesm": "^2.1.2",
     "esbuild": "^0.14.46",
     "esbx": "^0.0.20",
     "formdata-node": "^4.3.3",
