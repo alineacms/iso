@@ -33,7 +33,14 @@ await esbuild.build({
       'web-streams-polyfill': path.resolve(
         './node_modules/web-streams-polyfill/dist/ponyfill.es2018.mjs'
       ),
-      buffer: path.resolve('./src/blob.node.js')
+      buffer: path.resolve('./src/blob.node.js'),
+      'abort-controller': path.resolve(
+        './node_modules/abort-controller/dist/abort-controller.mjs'
+      ),
+      'event-target-shim': path.resolve(
+        './node_modules/event-target-shim/dist/event-target-shim.mjs'
+      ),
+      'util/types': path.resolve('./src/impl/util-types.node.js')
     })
   ],
   banner: {

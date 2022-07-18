@@ -5,6 +5,7 @@ export {fetch} from 'undici/index-fetch.js'
 import {Request as UndiciRequest} from 'undici/lib/fetch/request.js'
 export {Response} from 'undici/lib/fetch/response.js'
 import {toFormData} from './impl/multipart.node.js'
+export {AbortSignal, AbortController} from 'abort-controller'
 
 export class Request extends UndiciRequest {
   async formData() {

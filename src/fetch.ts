@@ -9,3 +9,7 @@ export type File = globalThis.File
 export const File = globalThis.File
 export type FormData = globalThis.FormData
 export const FormData = globalThis.FormData
+export type AbortController = globalThis.AbortController
+export const AbortController = globalThis.AbortController
+export type AbortSignal = globalThis.AbortSignal
+export const AbortSignal = globalThis.AbortSignal

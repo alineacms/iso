@@ -12,3 +12,4 @@ Supported:
 - Blob: via [formdata-node](https://github.com/octet-stream/form-data)
 - Text(De/En)CoderStream: via [@stardazed/streams-text-encoding](https://github.com/stardazed/sd-streams)
 - (De)CompressionStream: via implementation in [compression.node.ts](https://github.com/alineacms/iso/blob/master/src/impl/compression.node.ts)
+- AbortController/Signal: via [abort-controller](https://github.com/mysticatea/abort-controller)
