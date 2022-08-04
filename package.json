@@ -37,11 +37,11 @@
     "@stardazed/streams-text-encoding": "^1.0.2",
     "@types/node": "^18.0.0",
     "abort-controller": "^3.0.0",
-    "esbuild": "^0.14.46",
+    "esbuild": "^0.14.53",
     "esbx": "^0.0.20",
     "formdata-node": "^4.3.3",
     "typescript": "^4.8.0-dev.20220620",
-    "undici": "^5.5.1",
+    "undici": "^5.8.1",
     "web-streams-polyfill": "^3.2.1"
   },
   "scripts": {
