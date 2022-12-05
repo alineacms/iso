@@ -1,20 +1,22 @@
 export {crypto} from './crypto.node.js'
 export {
   ByteLengthQueuingStrategy,
+  CompressionStream,
   CountQueuingStrategy,
-  ReadableStream,
+  DecompressionStream,
   ReadableByteStreamController,
+  ReadableStream,
   ReadableStreamBYOBReader,
   ReadableStreamBYOBRequest,
   ReadableStreamDefaultController,
   ReadableStreamDefaultReader,
+  TextDecoderStream,
+  TextEncoderStream,
   TransformStream,
   TransformStreamDefaultController,
   WritableStream,
   WritableStreamDefaultController,
-  WritableStreamDefaultWriter,
-  CompressionStream,
-  DecompressionStream
+  WritableStreamDefaultWriter
 } from './streams.node.js'
 export {
   AbortController,
