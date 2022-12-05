@@ -5,4 +5,5 @@ export function atob(enc) {
 export function btoa(str) {
   return Buffer.from(str, 'binary').toString('base64')
 }
+// Expected by undici
 export function resolveObjectURL(url) {}
