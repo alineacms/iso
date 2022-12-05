@@ -25,7 +25,7 @@
     "@esbx/alias": "^0.0.20",
     "@peculiar/webcrypto": "^1.4.0",
     "@stardazed/streams-text-encoding": "^1.0.2",
-    "@types/node": "^18.0.0",
+    "@types/node": "^18.11.10",
     "abort-controller": "^3.0.0",
     "esbuild": "^0.15.18",
     "formdata-node": "^4.3.3",
