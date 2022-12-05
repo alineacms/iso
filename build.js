@@ -21,7 +21,6 @@ await esbuild.build({
   target: 'node14.13',
   bundle: true,
   treeShaking: true,
-  minify: true,
   inject: ['./inject.node.js'],
   plugins: [
     AliasPlugin.configure({
