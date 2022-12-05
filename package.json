@@ -10,21 +10,11 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "node": "./dist/index.node.js",
+      "node": "./dist/index.node.cjs",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./fetch": {
-      "node": "./dist/fetch.node.js",
-      "types": "./dist/fetch.d.ts",
-      "default": "./dist/fetch.js"
-    },
-    "./crypto": {
-      "node": "./dist/crypto.node.js",
-      "types": "./dist/crypto.d.ts",
-      "default": "./dist/crypto.js"
-    },
-    "./*": "./dist/*.js",
+    "./*": "./dist/*",
     "./package.json": "./package.json"
   },
   "files": [
@@ -37,10 +27,9 @@
     "@stardazed/streams-text-encoding": "^1.0.2",
     "@types/node": "^18.0.0",
     "abort-controller": "^3.0.0",
-    "esbuild": "^0.14.53",
-    "esbx": "^0.0.20",
+    "esbuild": "^0.15.18",
     "formdata-node": "^4.3.3",
-    "typescript": "^4.8.0-dev.20220620",
+    "typescript": "^4.9.3",
     "undici": "^5.5.1",
     "web-streams-polyfill": "^3.2.1"
   },

@@ -1,8 +1,51 @@
 # iso
 
-Pure ESM web APIs, using existing polyfills for node.js. The polyfills are
-converted to ESM and inlined into the resulting bundle so no extra dependencies
-are needed.
+Cross platform JavaScript apis
+
+- Ponyfilled for Node.js (14.13+), inlined into the bundle so no extra dependencies
+  are needed
+- Re-exported from globalThis for other platforms
+
+```ts
+import {
+  // SubtleCrypto
+  crypto,
+
+  // Web streams
+  ByteLengthQueuingStrategy,
+  CompressionStream,
+  CountQueuingStrategy,
+  DecompressionStream,
+  ReadableByteStreamController,
+  ReadableStream,
+  ReadableStreamBYOBReader,
+  ReadableStreamBYOBRequest,
+  ReadableStreamDefaultController,
+  ReadableStreamDefaultReader,
+  TextDecoderStream,
+  TextEncoderStream,
+  TransformStream,
+  TransformStreamDefaultController,
+  WritableStream,
+  WritableStreamDefaultController,
+  WritableStreamDefaultWriter,
+
+  // Fetch apis
+  AbortController,
+  AbortSignal,
+  File,
+  FormData,
+  Headers,
+  Request,
+  Response,
+  fetch,
+
+  // Binary utilities
+  atob,
+  btoa,
+  Blob
+} from '@alinea/iso'
+```
 
 Supported:
 
