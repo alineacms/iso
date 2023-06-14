@@ -38,11 +38,7 @@ export type WritableStreamDefaultWriter<W = any> =
 export type TextEncoderStream = globalThis.TextEncoderStream
 export type TextDecoderStream = globalThis.TextDecoderStream
 
-import type {
-  CompressionStream as CS,
-  DecompressionStream as DS
-} from './impl/compression.node'
-export type CompressionStream = CS
-export const CompressionStream: typeof CS = globalThis.CompressionStream
-export type DecompressionStream = CS
-export const DecompressionStream: typeof DS = globalThis.DecompressionStream
+export type CompressionStream = globalThis.CompressionStream
+export const CompressionStream = globalThis.CompressionStream
+export type DecompressionStream = globalThis.DecompressionStream
+export const DecompressionStream = globalThis.DecompressionStream

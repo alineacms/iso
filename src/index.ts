@@ -21,7 +21,6 @@ export {
 export {
   AbortController,
   AbortSignal,
-  File,
   FormData,
   Headers,
   Request,

@@ -1,6 +1,6 @@
 import {test} from 'uvu'
 import * as assert from 'uvu/assert'
-import {fetch, Blob, DecompressionStream, Response} from '@alinea/iso'
+import {fetch, DecompressionStream, Response} from '@alinea/iso'
 
 test('compression', async () => {
   const compressed = await fetch(

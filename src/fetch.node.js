@@ -1,17 +1,7 @@
-export {FormData} from 'undici/lib/fetch/formdata.js'
-export {File} from 'undici/lib/fetch/file.js'
-export {Headers} from 'undici/lib/fetch/headers.js'
-export {fetch} from 'undici/index-fetch.js'
-import {Request as UndiciRequest} from 'undici/lib/fetch/request.js'
-export {Response} from 'undici/lib/fetch/response.js'
-import {toFormData} from './impl/multipart.node.js'
-export {AbortSignal, AbortController} from 'abort-controller'
-
-export class Request extends UndiciRequest {
-  async formData() {
-    const contentType = this.headers.get('Content-Type')
-    if (/multipart\/form-data/.test(contentType))
-      return toFormData(this.body, contentType)
-    return super.formData()
-  }
-}
+export const fetch = globalThis.fetch
+export const Request = globalThis.Request
+export const Response = globalThis.Response
+export const Headers = globalThis.Headers
+export const FormData = globalThis.FormData
+export const AbortController = globalThis.AbortController
+export const AbortSignal = globalThis.AbortSignal

@@ -1,9 +1,3 @@
-export {Blob} from '../node_modules/formdata-node/lib/esm/Blob.js'
-export function atob(enc) {
-  return Buffer.from(enc, 'base64').toString('binary')
-}
-export function btoa(str) {
-  return Buffer.from(str, 'binary').toString('base64')
-}
-// Expected by undici
-export function resolveObjectURL(url) {}
+export const atob = globalThis.atob
+export const btoa = globalThis.btoa
+export const Blob = globalThis.Blob
