@@ -14,7 +14,7 @@ await esbuild.build({
   outdir: './dist',
   format: 'esm',
   platform: 'node',
-  entryPoints: ['./src/index.node.js'],
+  entryPoints: ['./src/index.node.js', './src/index.bun.js'],
   target: 'node18',
   bundle: true,
   treeShaking: true

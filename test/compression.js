@@ -1,8 +1,8 @@
 import {test} from 'uvu'
 import * as assert from 'uvu/assert'
-import {fetch, DecompressionStream, Response} from '@alinea/iso'
+import {fetch, DecompressionStream, CompressionStream, Response} from '@alinea/iso'
 
-test('compression', async () => {
+test('decompression stream', async () => {
   const compressed = await fetch(
     'data:application/octet-stream;base64,H4sIAAAAAAAAE/NIzcnJVyjPL8pJAQBSntaLCwAAAA=='
   ).then(r => r.blob())
